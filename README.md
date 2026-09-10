@@ -25,6 +25,7 @@ Backend variables use `VITAL_EDGES_` where applicable:
 ```sh
 VITAL_EDGES_AUTH_MODE=demo
 VITAL_EDGES_CORS_ORIGINS=http://localhost:5173,http://127.0.0.1:5173
+VITAL_EDGES_DATABASE_URL=postgresql+psycopg://postgres:postgres@localhost:5432/vital_edges
 ```
 
 Demo auth is explicitly for local hackathon development and is not production Supabase authentication.
