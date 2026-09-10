@@ -25,7 +25,7 @@ export function AppLayout() {
           </Link>
           <div className="flex flex-wrap items-center gap-3">
             <HealthBadge />
-            {user ? <span className="text-sm text-slate-600">{user.displayName} · {user.role}</span> : null}
+            {user ? <span className="text-sm text-slate-600">{user.displayName} Â· {user.role}</span> : null}
             {user ? (
               <button className="inline-flex min-h-11 items-center gap-2 rounded-lg border border-slate-200 px-4 text-sm font-medium" onClick={signOut} type="button">
                 <LogOut aria-hidden="true" size={16} /> Logout
