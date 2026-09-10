@@ -1,3 +1,4 @@
+import type React from "react";
 import { ShieldCheck, Store, Truck } from "lucide-react";
 import { useAuth } from "../auth/AuthContext";
 
