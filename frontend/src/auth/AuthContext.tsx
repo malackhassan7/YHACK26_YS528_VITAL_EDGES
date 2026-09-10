@@ -3,7 +3,7 @@ import { config } from "../api/config";
 import { getCurrentUser, type AuthUser } from "../api/client";
 import { findDemoUser } from "./demo-users";
 
-const TOKEN_STORAGE_KEY = "vital_edges_demo_token";
+export const TOKEN_STORAGE_KEY = "vital_edges_demo_token";
 
 type AuthStatus = "loading" | "authenticated" | "unauthenticated" | "error";
 
@@ -14,6 +14,7 @@ type AuthContextValue = {
   signIn: (email: string, password: string) => Promise<void>;
   signOut: () => void;
   reloadSession: () => Promise<void>;
+  token: string | null;
 };
 
 const AuthContext = createContext<AuthContextValue | undefined>(undefined);
@@ -22,11 +23,13 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [status, setStatus] = useState<AuthStatus>("loading");
   const [user, setUser] = useState<AuthUser | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [token, setToken] = useState<string | null>(null);
 
   const loadSession = useCallback(async () => {
     const token = window.localStorage.getItem(TOKEN_STORAGE_KEY);
     if (!token) {
       setUser(null);
+      setToken(null);
       setError(null);
       setStatus("unauthenticated");
       return;
@@ -36,11 +39,13 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     try {
       const currentUser = await getCurrentUser(token);
       setUser(currentUser);
+      setToken(token);
       setError(null);
       setStatus("authenticated");
     } catch (caught) {
       const message = caught instanceof Error ? caught.message : "Unable to load the current session.";
       setUser(null);
+      setToken(null);
       setError(message);
       setStatus("error");
     }
@@ -71,6 +76,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const signOut = useCallback(() => {
     window.localStorage.removeItem(TOKEN_STORAGE_KEY);
     setUser(null);
+    setToken(null);
     setError(null);
     setStatus("unauthenticated");
   }, []);
@@ -82,7 +88,8 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     signIn,
     signOut,
     reloadSession: loadSession,
-  }), [error, loadSession, signIn, signOut, status, user]);
+    token,
+  }), [error, loadSession, signIn, signOut, status, token, user]);
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 }

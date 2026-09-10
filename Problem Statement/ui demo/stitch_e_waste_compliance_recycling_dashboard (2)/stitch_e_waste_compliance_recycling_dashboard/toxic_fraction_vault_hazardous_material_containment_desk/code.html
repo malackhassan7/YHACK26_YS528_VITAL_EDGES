@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "secondary": "#565e74", "inverse-surface": "#213145", "background": "#f8f9ff", "surface-container-lowest": "#ffffff", "surface-container": "#e5eeff", "surface-bright": "#f8f9ff", "primary-fixed": "#97f5cc", "surface-tint": "#006c4e", "on-secondary-container": "#5c647a", "on-background": "#0b1c30", "primary-fixed-dim": "#7bd8b1", "on-tertiary-container": "#ffe5d3", "on-secondary-fixed": "#131b2e", "secondary-fixed": "#dae2fd", "on-error-container": "#93000a", "primary": "#005d42", "surface-container-high": "#dce9ff", "surface-container-highest": "#d3e4fe", "tertiary": "#7d4200", "tertiary-fixed-dim": "#ffb77d", "on-secondary-fixed-variant": "#3f465c", "inverse-primary": "#7bd8b1", "on-tertiary-fixed-variant": "#6e3900", "tertiary-container": "#a05600", "outline": "#6e7a73", "surface-variant": "#d3e4fe", "on-primary-fixed": "#002115", "error-container": "#ffdad6", "surface-dim": "#cbdbf5", "on-primary-container": "#9ffdd3", "tertiary-fixed": "#ffdcc3", "on-tertiary": "#ffffff", "on-surface": "#0b1c30", "on-primary": "#ffffff", "on-secondary": "#ffffff", "on-error": "#ffffff", "on-tertiary-fixed": "#2f1500", "surface": "#f8f9ff", "primary-container": "#047857", "error": "#ba1a1a", "surface-container-low": "#eff4ff", "on-primary-fixed-variant": "#00513a", "secondary-container": "#dae2fd", "on-surface-variant": "#3e4943", "secondary-fixed-dim": "#bec6e0", "outline-variant": "#bdc9c1", "inverse-on-surface": "#eaf1ff" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "space-md": "0.75rem", "space-xs": "0.25rem", "space-2xs": "0.125rem", "space-xl": "2rem", "space-sm": "0.5rem", "gutter-default": "1rem", "layout-margin-desktop": "1.5rem", "space-lg": "1.5rem", "space-base": "1rem", "space-2xl": "3rem", "layout-margin-mobile": "1rem" }, "fontFamily": { "headline-xl-mobile": ["Inter"], "body-sm": ["Inter"], "headline-sm": ["Inter"], "headline-xl": ["Inter"], "body-lg": ["Inter"], "code-sm": ["JetBrains Mono"], "label-sm": ["Inter"], "body-md": ["Inter"], "label-lg": ["Inter"], "headline-md": ["Inter"], "code-md": ["JetBrains Mono"], "label-md": ["Inter"], "headline-lg": ["Inter"] }, "fontSize": { "headline-xl-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "headline-sm": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "600" }], "headline-xl": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "code-sm": ["11px", { "lineHeight": "16px", "fontWeight": "500" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "500" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "headline-md": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "code-md": ["13px", { "lineHeight": "18px", "fontWeight": "500" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" }], "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" }] } } } };</script></head><body class="bg-background font-body-md text-on-surface min-h-screen"><header class="fixed top-0 left-0 w-full z-50 bg-surface-container-lowest border-b border-outline-variant/30 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 w-full px-layout-margin-desktop flex items-center justify-between gap-space-md border-b border-outline-variant/20"><div class="flex items-center gap-space-md min-w-[280px]"><img alt="KabaadSetu Circuit Leaf Brand Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UQ6f2rHn7LGlK7c5VGUoJNpmmJaCs_btCdAtytIQzENwq3M57lLf2I8uKeUHtebK7daO0WbO74PFh5qr__1hOIrw-gtJ4VD3sCJyuaCLZWYB80S-RtX6d7eshiOmlWnJQWBI0OlfApm39yfSgxcbwbSMGJ_InhPM7Y9uDvMEq42vfyzvQz1uYYyEEC5ql-3SBK6pFOdv5Y0ixIBryPXoVfZU7ksHBtknY32dasGrGuENuCg4SQuNJlsOk"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight leading-none">KabaadSetu</span><span class="font-label-sm text-label-sm text-secondary tracking-wide uppercase mt-space-2xs">Formal Recycler Terminal</span></div></div><div class="hidden lg:flex items-center gap-space-md flex-1 justify-center max-w-3xl"><div class="flex items-center gap-space-xs bg-surface-container-low px-space-md py-1.5 rounded-lg border border-outline-variant/40"><span class="material-symbols-outlined text-secondary text-[18px]">domain</span><span class="font-label-md text-label-md text-on-surface font-semibold">GreenTech Recyclers - Tamil Nadu Unit 1 (Vellore)</span><span class="material-symbols-outlined text-secondary text-[16px]">expand_more</span></div><div class="inline-flex items-center gap-1.5 px-space-md py-1 rounded-full bg-primary-fixed/40 text-primary border border-primary/20"><span class="inline-block w-2 h-2 rounded-full bg-primary-container animate-pulse"></span><span class="font-code-sm text-code-sm font-semibold tracking-wide">CPCB Authorized Unit #TN-EW-2026-981</span></div></div><div class="flex items-center gap-space-md justify-end min-w-[340px]"><div class="hidden sm:inline-flex items-center gap-1.5 px-space-sm py-1 rounded-md bg-surface-container-low text-secondary border border-outline-variant/30"><span class="inline-block w-2 h-2 rounded-full bg-primary-container"></span><span class="font-label-sm text-label-sm font-medium text-on-surface">Inflow Stream Active</span></div><button class="inline-flex items-center gap-1.5 bg-primary hover:bg-primary-container text-on-primary px-space-md py-2 rounded-lg font-label-md text-label-md tracking-wide shadow-sm transition-colors"><span class="material-symbols-outlined text-[18px]">add_box</span><span>New Manual Inward</span></button><div class="h-8 w-px bg-outline-variant/40 hidden sm:block"></div><div class="flex items-center gap-space-sm pl-space-xs"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="hidden xl:flex flex-col text-left"><span class="font-label-md text-label-md text-on-surface font-semibold leading-tight">Vikram R.</span><span class="font-label-sm text-label-sm text-secondary leading-tight">(Operations)</span></div></div></div></div><div class="h-12 w-full px-layout-margin-desktop bg-surface-container-lowest flex items-center justify-between overflow-x-auto"><nav class="flex items-center gap-space-xl h-full" data-active-classes="border-b-2 border-primary text-primary font-semibold"><a class="h-full inline-flex items-center font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors pb-space-2xs" data-path="live-intake-weighbridge" href="#">Live Intake &amp; Weighbridge</a><a class="h-full inline-flex items-center font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors pb-space-2xs" data-path="epr-credit-ledger" href="#">EPR Credit Ledger</a><a class="h-full inline-flex items-center font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors pb-space-2xs" data-path="predatory-pricing-radar" href="#">Predatory Pricing Radar</a><a class="h-full inline-flex items-center font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors pb-space-2xs" data-path="toxic-fraction-vault" href="#">Toxic Fraction Vault</a><a class="h-full inline-flex items-center font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors pb-space-2xs" data-path="cpcb-portal-audit-logs" href="#">CPCB Portal Audit Logs</a></nav><div class="hidden md:flex items-center gap-space-sm text-secondary"><span class="font-code-sm text-code-sm">GATEWAY: PORTAL-SYNC OK</span><span class="material-symbols-outlined text-[16px] text-primary">verified</span></div></div></header><aside class="fixed left-0 top-28 h-[calc(100vh-7rem)] w-64 bg-surface-container-lowest border-r border-outline-variant/30 z-40 flex flex-col justify-between py-space-md"><div class="flex flex-col gap-space-xs px-space-sm"><div class="px-space-md py-space-xs font-label-sm text-label-sm uppercase tracking-wider text-secondary">Operations Desk</div><nav class="flex flex-col gap-1" data-active-classes="bg-surface-container-high text-primary font-semibold"><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-label-md text-label-md" data-path="manifest-verification" href="#"><span class="material-symbols-outlined text-[20px]">receipt_long</span><span>Manifest Verification</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-label-md text-label-md" data-path="dismantling-yard" href="#"><span class="material-symbols-outlined text-[20px]">precision_manufacturing</span><span>Dismantling Yard</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-label-md text-label-md" data-path="mass-balance" href="#"><span class="material-symbols-outlined text-[20px]">balance</span><span>Mass Balance Engine</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-label-md text-label-md" data-path="hazardous-vault" href="#"><span class="material-symbols-outlined text-[20px]">warning</span><span>Hazardous Storage</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-label-md text-label-md" data-path="cpcb-xml-export" href="#"><span class="material-symbols-outlined text-[20px]">cloud_sync</span><span>CPCB Gateway Sync</span></a></nav></div><div class="px-space-md pt-space-md border-t border-outline-variant/30"><div class="bg-surface-container-low p-space-sm rounded-lg border border-outline-variant/40"><div class="flex items-center justify-between mb-1"><span class="font-label-sm text-label-sm text-secondary font-medium">Weighbridge Scale</span><span class="font-code-sm text-code-sm text-primary font-semibold">CALIBRATED</span></div><div class="font-code-md text-code-md text-on-surface font-semibold">BRIDGE-01: ONLINE</div><div class="font-label-sm text-label-sm text-secondary mt-1">Tare Drift: ±0.02%</div></div></div></aside><div class="pl-64"><main class="relative pt-28 min-h-screen bg-background w-full px-layout-margin-desktop py-space-lg"><div class="flex flex-col w-full">
+<!-- Operational Sub-Navigation Bar -->
+<section class="w-full bg-surface-container-lowest border-b border-outline-variant/30 px-space-md py-space-sm mb-space-lg">
+<div class="flex flex-col xl:flex-row items-start xl:items-center justify-between gap-space-md">
+<div class="flex flex-wrap items-center gap-space-sm">
+<div class="inline-flex items-center gap-2 px-space-md py-1.5 rounded-full bg-primary-fixed/30 text-primary border border-primary/20">
+<span class="inline-block w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-code-sm text-code-sm font-semibold tracking-tight">State Pollution Board Hazardous Storage Protocol Compliant</span>
+<span class="text-outline-variant">•</span>
+<span class="font-label-sm text-label-sm font-medium">TSDF Liaison Node Online</span>
+</div>
+<div class="hidden sm:inline-flex items-center gap-1.5 px-space-sm py-1 rounded bg-surface-container text-on-surface-variant font-code-sm text-code-sm">
+<span class="material-symbols-outlined text-[16px] text-primary">security</span>
+<span>HAZ-ZONE-SECURE : SHELTER-V4</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm w-full xl:w-auto justify-between xl:justify-end">
+<button class="inline-flex items-center gap-1.5 bg-surface-container-low hover:bg-surface-container text-on-surface px-space-md py-2 rounded-lg font-label-md text-label-md border border-outline-variant/40 transition-colors">
+<span class="material-symbols-outlined text-[18px] text-secondary">sync</span>
+<span>Sync TSDF Node</span>
+</button>
+<button class="inline-flex items-center gap-2 bg-primary hover:bg-primary-container text-on-primary px-space-lg py-2 rounded-lg font-label-md text-label-md tracking-wide shadow-sm transition-all hover:shadow">
+<span class="material-symbols-outlined text-[18px]">assignment_turned_in</span>
+<span>Generate Form-10 Hazardous Waste Movement Document</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Top KPI Metric Grid -->
+<section class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-md mb-space-lg">
+<!-- Card 1: Lead -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md border border-outline-variant/30 flex flex-col justify-between shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md uppercase tracking-wider text-secondary">Total Lead (Pb) Immobilized</span>
+<span class="material-symbols-outlined text-primary text-[20px]">shield_with_heart</span>
+</div>
+<div class="my-space-sm">
+<div class="font-headline-xl text-headline-xl text-on-surface font-semibold tracking-tight">420.4 <span class="text-headline-md font-body-md text-secondary">kg</span></div>
+<div class="flex items-center gap-1.5 mt-1 font-label-sm text-label-sm text-primary">
+<span class="material-symbols-outlined text-[16px]">trending_up</span>
+<span>+4.8% MTD Vitrified Slag</span>
+</div>
+</div>
+<div class="pt-space-xs border-t border-outline-variant/20 flex items-center justify-between font-code-sm text-code-sm text-secondary">
+<span>Sched. II Mandate</span>
+<span class="text-primary font-semibold">100% SECURE</span>
+</div>
+</div>
+<!-- Card 2: Mercury -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md border border-outline-variant/30 flex flex-col justify-between shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md uppercase tracking-wider text-secondary">Elemental Mercury (Hg) Recovered</span>
+<span class="material-symbols-outlined text-primary text-[20px]">science</span>
+</div>
+<div class="my-space-sm">
+<div class="font-headline-xl text-headline-xl text-on-surface font-semibold tracking-tight">18.2 <span class="text-headline-md font-body-md text-secondary">kg</span></div>
+<div class="flex items-center gap-1.5 mt-1 font-label-sm text-label-sm text-on-surface-variant">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<span>Sub-surface Sealed Retorts</span>
+</div>
+</div>
+<div class="pt-space-xs border-t border-outline-variant/20 flex items-center justify-between font-code-sm text-code-sm text-secondary">
+<span>Zero Vapor Loss</span>
+<span class="text-primary font-semibold">&lt; 0.001 ppm</span>
+</div>
+</div>
+<!-- Card 3: BFR -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md border border-outline-variant/30 flex flex-col justify-between shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md uppercase tracking-wider text-secondary">Brominated Flame Retardants (BFR)</span>
+<span class="material-symbols-outlined text-tertiary text-[20px]">local_fire_department</span>
+</div>
+<div class="my-space-sm">
+<div class="font-headline-xl text-headline-xl text-on-surface font-semibold tracking-tight">610 <span class="text-headline-md font-body-md text-secondary">kg</span></div>
+<div class="flex items-center gap-1.5 mt-1 font-label-sm text-label-sm text-tertiary">
+<span class="material-symbols-outlined text-[16px]">local_shipping</span>
+<span>Scheduled High-Temp Incineration</span>
+</div>
+</div>
+<div class="pt-space-xs border-t border-outline-variant/20 flex items-center justify-between font-code-sm text-code-sm text-secondary">
+<span>TNWMP Gummidipoondi</span>
+<span class="text-on-surface font-medium">Slot #04</span>
+</div>
+</div>
+<!-- Card 4: Vault Storage -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md border border-outline-variant/30 flex flex-col justify-between shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md uppercase tracking-wider text-secondary">Vault Storage Capacity Used</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">inventory_2</span>
+</div>
+<div class="my-space-sm">
+<div class="flex items-baseline justify-between">
+<div class="font-headline-xl text-headline-xl text-on-surface font-semibold tracking-tight">41.2%</div>
+<span class="font-code-sm text-code-sm text-secondary font-medium">18.8 MT Buffer</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-2 mt-2 overflow-hidden">
+<div class="bg-primary-container h-full rounded-full" style="width: 41.2%"></div>
+</div>
+</div>
+<div class="pt-space-xs border-t border-outline-variant/20 flex items-center justify-between font-code-sm text-code-sm text-secondary">
+<span>TSDF Facility Unit 4</span>
+<span class="text-primary font-semibold">NOMINAL</span>
+</div>
+</div>
+</section>
+<!-- Main Split Layout (65% / 35%) -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg mb-space-lg">
+<!-- Left Panel: Storage Register (65%) -->
+<div class="lg:col-span-8 flex flex-col gap-space-md">
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 shadow-sm overflow-hidden flex flex-col">
+<!-- Panel Header -->
+<div class="p-space-md border-b border-outline-variant/20 flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Manifested Hazardous Fraction Storage Register</h2>
+<p class="font-body-sm text-body-sm text-secondary">Cryptographic chain-of-isolation and containment records under CPCB Sched. II</p>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="font-code-sm text-code-sm px-2 py-0.5 rounded bg-surface-container-low text-secondary border border-outline-variant/30">14 ACTIVE LOTS</span>
+<button class="p-1.5 rounded hover:bg-surface-container text-secondary transition-colors" title="Export Ledger">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+</div>
+</div>
+<!-- Filters Toolbar -->
+<div class="p-space-md bg-surface-container-low border-b border-outline-variant/20 flex flex-col gap-space-sm">
+<div class="flex flex-col md:flex-row items-center gap-space-sm">
+<div class="relative flex-1 w-full">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-secondary text-[18px]">search</span>
+<input class="w-full bg-surface-container-lowest border border-outline-variant/40 rounded-lg pl-9 pr-3 py-1.5 text-body-md font-body-md text-on-surface placeholder:text-secondary/60 focus:outline-none focus:border-primary" placeholder="Search Canister ID, Manifest #, Scrap Origin..." type="text"/>
+</div>
+<div class="flex items-center gap-space-xs w-full md:w-auto">
+<select class="bg-surface-container-lowest border border-outline-variant/40 rounded-lg px-space-sm py-1.5 text-body-sm font-body-sm text-on-surface">
+<option>All Storage Zones</option>
+<option>Vault A-14 (Lead-Lined Bunker)</option>
+<option>Retort Chamber B (Negative Pressure)</option>
+<option>Vault C-03 (Dry Desiccant Room)</option>
+<option>Secure Silo 2 (Flame Protected)</option>
+<option>Neutralization Pit Alpha</option>
+</select>
+<select class="bg-surface-container-lowest border border-outline-variant/40 rounded-lg px-space-sm py-1.5 text-body-sm font-body-sm text-on-surface">
+<option>All Isolation Statuses</option>
+<option>Sealed &amp; Cold-Stored</option>
+<option>Encapsulated Retort</option>
+<option>Inert Matrix Bound</option>
+<option>Awaiting Incineration</option>
+<option>Neutralized Slurry</option>
+</select>
+</div>
+</div>
+<!-- Hazard Class Filter Tabs -->
+<div class="flex items-center gap-space-xs overflow-x-auto pt-1">
+<button class="px-3 py-1 rounded font-label-sm text-label-sm bg-primary text-on-primary font-medium whitespace-nowrap">All Fractions (14)</button>
+<button class="px-3 py-1 rounded font-label-sm text-label-sm bg-surface-container-lowest hover:bg-surface-container text-on-surface border border-outline-variant/30 whitespace-nowrap">Class A (Heavy Metals)</button>
+<button class="px-3 py-1 rounded font-label-sm text-label-sm bg-surface-container-lowest hover:bg-surface-container text-on-surface border border-outline-variant/30 whitespace-nowrap">Class B (Organic Halogens)</button>
+<button class="px-3 py-1 rounded font-label-sm text-label-sm bg-surface-container-lowest hover:bg-surface-container text-on-surface border border-outline-variant/30 whitespace-nowrap">Class C (Corrosive Electrolytes)</button>
+</div>
+</div>
+<!-- High-density Audit Register Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container text-secondary font-label-sm text-label-sm uppercase tracking-wider border-b border-outline-variant/30">
+<th class="py-2.5 px-space-md">Canister / Pallet ID</th>
+<th class="py-2.5 px-space-sm">Toxic Element &amp; Form</th>
+<th class="py-2.5 px-space-sm">Origin Scrap Lot</th>
+<th class="py-2.5 px-space-sm">Storage Zone</th>
+<th class="py-2.5 px-space-sm">TSDF Manifest #</th>
+<th class="py-2.5 px-space-sm">Safety Status</th>
+<th class="py-2.5 px-space-sm text-right">Seal Hash &amp; Action</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/20 text-body-sm font-body-sm text-on-surface">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-3 px-space-md">
+<div class="font-code-md text-code-md font-semibold text-primary">#VAULT-PB-042</div>
+<div class="font-code-sm text-code-sm text-secondary">Vol: 112.4 kg</div>
+</td>
+<td class="py-3 px-space-sm">
+<div class="font-semibold text-on-surface">Lead Oxide Powder</div>
+<div class="text-secondary font-label-sm text-label-sm">99.1% pure vitrified</div>
+</td>
+<td class="py-3 px-space-sm">
+<span class="inline-block px-1.5 py-0.5 rounded bg-surface-container font-code-sm text-code-sm text-on-surface-variant border border-outline-variant/30">#EW-00421</span>
+<div class="text-secondary text-[11px] mt-0.5">Motherboards Yard</div>
+</td>
+<td class="py-3 px-space-sm">
+<div class="font-medium">Vault A-14</div>
+<div class="text-secondary text-[11px]">Lead-Lined Bunker</div>
+</td>
+<td class="py-3 px-space-sm font-code-sm text-code-sm font-medium">#TSDF-TN-4401</td>
+<td class="py-3 px-space-sm">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-semibold bg-emerald-50 text-primary-container border border-primary/20">Sealed &amp; Cold-Stored</span>
+</td>
+<td class="py-3 px-space-sm text-right">
+<div class="font-code-sm text-code-sm text-secondary font-mono">sha256:7e14...c9a</div>
+<button class="mt-1 text-primary hover:underline font-label-sm text-label-sm font-semibold">Inspect Seal</button>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-3 px-space-md">
+<div class="font-code-md text-code-md font-semibold text-primary">#VAULT-HG-018</div>
+<div class="font-code-sm text-code-sm text-secondary">Vol: 18.2 kg</div>
+</td>
+<td class="py-3 px-space-sm">
+<div class="font-semibold text-on-surface">Elemental Mercury Phosphor</div>
+<div class="text-secondary font-label-sm text-label-sm">Cold Vapor Sealed</div>
+</td>
+<td class="py-3 px-space-sm">
+<span class="inline-block px-1.5 py-0.5 rounded bg-surface-container font-code-sm text-code-sm text-on-surface-variant border border-outline-variant/30">#EW-00423</span>
+<div class="text-secondary text-[11px] mt-0.5">CRT Tubes Disassembly</div>
+</td>
+<td class="py-3 px-space-sm">
+<div class="font-medium">Retort Chamber B</div>
+<div class="text-secondary text-[11px]">Negative Pressure</div>
+</td>
+<td class="py-3 px-space-sm font-code-sm text-code-sm font-medium">#TSDF-TN-4408</td>
+<td class="py-3 px-space-sm">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-semibold bg-secondary-container text-on-secondary-fixed-variant border border-outline-variant/30">Encapsulated Retort</span>
+</td>
+<td class="py-3 px-space-sm text-right">
+<div class="font-code-sm text-code-sm text-secondary font-mono">sha256:3d91...10b</div>
+<button class="mt-1 text-primary hover:underline font-label-sm text-label-sm font-semibold">Inspect Seal</button>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-3 px-space-md">
+<div class="font-code-md text-code-md font-semibold text-primary">#VAULT-CD-009</div>
+<div class="font-code-sm text-code-sm text-secondary">Vol: 74.0 kg</div>
+</td>
+<td class="py-3 px-space-sm">
+<div class="font-semibold text-on-surface">Cadmium Coated Electrodes</div>
+<div class="text-secondary font-label-sm text-label-sm">Solid Insoluble Paste</div>
+</td>
+<td class="py-3 px-space-sm">
+<span class="inline-block px-1.5 py-0.5 rounded bg-surface-container font-code-sm text-code-sm text-on-surface-variant border border-outline-variant/30">#EW-00418</span>
+<div class="text-secondary text-[11px] mt-0.5">Telecom NiCad Line</div>
+</td>
+<td class="py-3 px-space-sm">
+<div class="font-medium">Vault C-03</div>
+<div class="text-secondary text-[11px]">Dry Desiccant Room</div>
+</td>
+<td class="py-3 px-space-sm font-code-sm text-code-sm font-medium">#TSDF-TN-4395</td>
+<td class="py-3 px-space-sm">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-semibold bg-emerald-50 text-primary-container border border-primary/20">Inert Matrix Bound</span>
+</td>
+<td class="py-3 px-space-sm text-right">
+<div class="font-code-sm text-code-sm text-secondary font-mono">sha256:9a88...4ff</div>
+<button class="mt-1 text-primary hover:underline font-label-sm text-label-sm font-semibold">Inspect Seal</button>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-3 px-space-md">
+<div class="font-code-md text-code-md font-semibold text-tertiary">#VAULT-BFR-031</div>
+<div class="font-code-sm text-code-sm text-secondary">Vol: 610.0 kg</div>
+</td>
+<td class="py-3 px-space-sm">
+<div class="font-semibold text-on-surface">DecaBDE Halogenated Resins</div>
+<div class="text-secondary font-label-sm text-label-sm">Pelletized Plastic</div>
+</td>
+<td class="py-3 px-space-sm">
+<span class="inline-block px-1.5 py-0.5 rounded bg-surface-container font-code-sm text-code-sm text-on-surface-variant border border-outline-variant/30">#EW-00420</span>
+<div class="text-secondary text-[11px] mt-0.5">Server Cases Shredder</div>
+</td>
+<td class="py-3 px-space-sm">
+<div class="font-medium">Secure Silo 2</div>
+<div class="text-secondary text-[11px]">Flame Protected</div>
+</td>
+<td class="py-3 px-space-sm font-code-sm text-code-sm font-medium">#TSDF-TN-4389</td>
+<td class="py-3 px-space-sm">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-semibold bg-amber-50 text-amber-800 border border-amber-200">Awaiting Incineration</span>
+</td>
+<td class="py-3 px-space-sm text-right">
+<div class="font-code-sm text-code-sm text-secondary font-mono">sha256:2b70...5cc</div>
+<button class="mt-1 text-tertiary hover:underline font-label-sm text-label-sm font-semibold">Manifest Transit</button>
+</td>
+</tr>
+<!-- Row 5 -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-3 px-space-md">
+<div class="font-code-md text-code-md font-semibold text-primary">#VAULT-LI-015</div>
+<div class="font-code-sm text-code-sm text-secondary">Vol: 234.0 kg</div>
+</td>
+<td class="py-3 px-space-sm">
+<div class="font-semibold text-on-surface">Lithium Hexafluorophosphate</div>
+<div class="text-secondary font-label-sm text-label-sm">Neutralized Slurry Soln</div>
+</td>
+<td class="py-3 px-space-sm">
+<span class="inline-block px-1.5 py-0.5 rounded bg-surface-container font-code-sm text-code-sm text-on-surface-variant border border-outline-variant/30">#EW-00422</span>
+<div class="text-secondary text-[11px] mt-0.5">Prismatic Cells Line</div>
+</td>
+<td class="py-3 px-space-sm">
+<div class="font-medium">Neutralization Pit Alpha</div>
+<div class="text-secondary text-[11px]">Submerged Agitator</div>
+</td>
+<td class="py-3 px-space-sm font-code-sm text-code-sm font-medium">#TSDF-TN-4382</td>
+<td class="py-3 px-space-sm">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-semibold bg-emerald-50 text-primary-container border border-primary/20">Neutralized Slurry</span>
+</td>
+<td class="py-3 px-space-sm text-right">
+<div class="font-code-sm text-code-sm text-secondary font-mono">sha256:5c41...8da</div>
+<button class="mt-1 text-primary hover:underline font-label-sm text-label-sm font-semibold">View Run Sheet</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footer / Regulatory Compliance Banner -->
+<div class="p-space-md bg-surface-container-low border-t border-outline-variant/20 flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0 mt-0.5">verified_user</span>
+<div class="flex-1">
+<p class="font-label-sm text-label-sm text-on-surface font-semibold">CPCB Schedule II Mandate Enforcement</p>
+<p class="font-body-sm text-body-sm text-secondary mt-0.5">
+              All hazardous fractions must be transferred to authorized Treatment, Storage, and Disposal Facilities (TSDF) within 90 days of generation. Zero landfilling penalty regime active across all Tamil Nadu industrial units.
+            </p>
+</div>
+<span class="hidden sm:inline-block font-code-sm text-code-sm text-primary font-semibold shrink-0 bg-primary-fixed/40 px-2 py-1 rounded border border-primary/20">RULE 16(3) OK</span>
+</div>
+</div>
+<!-- Live Vault Physical Inspection Gallery -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md border border-outline-variant/30 shadow-sm">
+<div class="flex items-center justify-between mb-space-sm">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Vault Physical Inspection &amp; Hermetic Containment</h3>
+<p class="font-body-sm text-body-sm text-secondary">Verified CCTV and hazardous isolation chambers inside Facility Unit 4</p>
+</div>
+<span class="font-code-sm text-code-sm text-primary flex items-center gap-1 font-semibold">
+<span class="inline-block w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+            CCTV NODES 01-03 ACTIVE
+          </span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm">
+<div class="rounded-lg overflow-hidden border border-outline-variant/30 flex flex-col bg-surface-container-low">
+<img class="w-full h-32 object-cover" data-alt="Industrial lead-lined bunker safe storage canisters for vitrified e-waste fractions, sterile clean room lighting with high security hazmat locks, precision machinery background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1OWj4-og9z2hC7tiPheZMbC-UW4qZIQRnFjLM7YqlX6ZnppVjipwp17HkgxGl60YPPwpaKMu_UiLHjGIGBaTBWC9rRaw1snAnOqvVlv0ixfeoiUpCNtchh_VVzdTOwunIQrfV6SibHPzXic9_O3v994YcNZkCyp-ath9qUJAA88FbQic8zKZBPxilrKHhumqq7DouHM-7Q4wWdNgZ21CnFXan0i1fGYiY_XUywT7LimJ896TY2FPnXQ"/>
+<div class="p-space-xs font-code-sm text-code-sm text-on-surface flex justify-between items-center">
+<span>CANISTER DOCK A</span>
+<span class="text-primary font-semibold">ISO-PASS</span>
+</div>
+</div>
+<div class="rounded-lg overflow-hidden border border-outline-variant/30 flex flex-col bg-surface-container-low">
+<img class="w-full h-32 object-cover" data-alt="Industrial negative pressure mercury retort chamber equipped with digital pressure gauges, heavy stainless steel seals, airtight valves in hazardous recycling plant." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPpYT47E6vfxH4XWnUlT7USfVodx196g_8PP5hqf9SGDVXk_m6bWW49_6-ENBrFm2vSM6S5oxde3wQkUQ21Zd1VRqQwvBca1Kes_kPdCEXALaQeMe6Nmb0OPi6cavATs__9SZdvo9DXK1_zH1slLhT5l2paLO1oK6i24c6LRjYf2NohOdKYAtLF0NpuIlp_aT2830Sg6YoMKVXI9nBnC1ATSZtHr4hoUTExpbVpJ_V7eQ-S1pOQAengA"/>
+<div class="p-space-xs font-code-sm text-code-sm text-on-surface flex justify-between items-center">
+<span>RETORT CHAMBER B</span>
+<span class="text-primary font-semibold">-45 Pa OK</span>
+</div>
+</div>
+<div class="rounded-lg overflow-hidden border border-outline-variant/30 flex flex-col bg-surface-container-low">
+<img class="w-full h-32 object-cover" data-alt="Industrial chemical neutralization agitation tank for battery electrolytes, high grade plastic lining with automated monitoring probes and glycol cooling pipes." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeauaXlLiRwWhO8Nh5aP10KrCetQDTQGlzgJ46YDHYkV2ZvAPosyH_fLEjZMT1V1Lh--VO3uObAsGTpE-uq_Z3IazqvT-Yru5KKvqRIEOZCoAkt133fS6RgvKRuYFWW51U48slSN5x5qjBr1zyrd4w7Q1Cg_2wjL4WenvMORpVivSx4S0xYyCfZ3ei17GQvsZ3F3BYTx4LCRUooK9a48onXYCYFqXML-WFT2hQPLRrVSmS6UKBy95UMA"/>
+<div class="p-space-xs font-code-sm text-code-sm text-on-surface flex justify-between items-center">
+<span>PIT ALPHA</span>
+<span class="text-primary font-semibold">pH 7.1 SAFE</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Panel: Telemetry & Automated Incident Prevention (35%) -->
+<div class="lg:col-span-4 flex flex-col gap-space-md">
+<!-- Card 1: Live Environmental Sniffers -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md border border-outline-variant/30 shadow-sm flex flex-col">
+<div class="flex items-center justify-between pb-space-sm border-b border-outline-variant/20">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Live IoT Environmental Sensor Feeds</h3>
+<p class="font-body-sm text-body-sm text-secondary">Opto-acoustic &amp; chemical sniffer array</p>
+</div>
+<span class="inline-block w-2.5 h-2.5 rounded-full bg-primary animate-ping"></span>
+</div>
+<div class="py-space-xs font-code-sm text-code-sm text-secondary border-b border-outline-variant/10">
+          All 8 Industrial Sniffers Normal • Calibrated: 08:00 AM Today
+        </div>
+<!-- Sensor List -->
+<div class="divide-y divide-outline-variant/10">
+<!-- Sensor 1 -->
+<div class="py-space-sm flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-medium">Lead Air Particulate Sensor</span>
+<span class="font-code-md text-code-md font-bold text-primary">0.02 µg/m³</span>
+</div>
+<div class="flex items-center justify-between text-secondary font-label-sm text-label-sm">
+<span>Threshold: &lt; 0.50 µg/m³</span>
+<span class="text-primary font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                Nominal
+              </span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-1.5 mt-1 overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 4%"></div>
+</div>
+</div>
+<!-- Sensor 2 -->
+<div class="py-space-sm flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-medium">Mercury Vapor Sniffer</span>
+<span class="font-code-md text-code-md font-bold text-primary">0.00 ppm</span>
+</div>
+<div class="flex items-center justify-between text-secondary font-label-sm text-label-sm">
+<span>Threshold: &lt; 0.05 ppm</span>
+<span class="text-primary font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                Zero Vapor Leakage
+              </span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-1.5 mt-1 overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 0%"></div>
+</div>
+</div>
+<!-- Sensor 3 -->
+<div class="py-space-sm flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-medium">Battery Neutralization Pit Temp</span>
+<span class="font-code-md text-code-md font-bold text-on-surface">24.2°C</span>
+</div>
+<div class="flex items-center justify-between text-secondary font-label-sm text-label-sm">
+<span>Optimal Range: 18°C - 28°C</span>
+<span class="text-secondary font-medium">Glycol Chiller Active</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-1.5 mt-1 overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 62%"></div>
+</div>
+</div>
+<!-- Sensor 4 -->
+<div class="py-space-sm flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-medium">VOC / Dioxin Ambient Sniffer</span>
+<span class="font-code-md text-code-md font-bold text-primary">0.04 mg/m³</span>
+</div>
+<div class="flex items-center justify-between text-secondary font-label-sm text-label-sm">
+<span>Threshold: &lt; 0.10 mg/m³</span>
+<span class="text-primary font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                Compliant
+              </span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-1.5 mt-1 overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 40%"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 2: Emergency TSDF Transfer Manifest -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md border border-outline-variant/30 shadow-sm flex flex-col">
+<div class="flex items-center gap-2 pb-space-sm border-b border-outline-variant/20">
+<span class="material-symbols-outlined text-primary text-[22px]">departure_board</span>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Scheduled TSDF Transit Outflow</h3>
+<p class="font-body-sm text-body-sm text-secondary">CPCB Form-10 Consignment Schedule</p>
+</div>
+</div>
+<div class="my-space-sm flex flex-col gap-space-xs font-body-sm text-body-sm">
+<div class="p-2.5 rounded bg-surface-container-low flex flex-col gap-0.5 border border-outline-variant/20">
+<span class="font-label-sm text-label-sm text-secondary">Designated TSDF Destination</span>
+<span class="font-label-md text-label-md font-semibold text-on-surface">Tamil Nadu Waste Management Project (TNWMP)</span>
+<span class="font-code-sm text-code-sm text-secondary">Gummidipoondi Hazardous Landfill Facility #TN-02</span>
+</div>
+<div class="grid grid-cols-2 gap-space-xs">
+<div class="p-2 rounded bg-surface-container-low border border-outline-variant/20">
+<span class="font-label-sm text-label-sm text-secondary">Authorized Transporter</span>
+<div class="font-label-md text-label-md font-medium text-on-surface mt-0.5">CleanEnviro Logistics</div>
+<div class="font-code-sm text-code-sm text-primary font-semibold">TN-09-AX-4812 (GPS OK)</div>
+</div>
+<div class="p-2 rounded bg-surface-container-low border border-outline-variant/20">
+<span class="font-label-sm text-label-sm text-secondary">Scheduled Pickup</span>
+<div class="font-label-md text-label-md font-medium text-on-surface mt-0.5">Tomorrow, 06:30 AM</div>
+<div class="font-code-sm text-code-sm text-secondary font-medium">Driver Pass #TN-DP-891</div>
+</div>
+</div>
+<div class="p-2 rounded bg-surface-container-low border border-outline-variant/20 flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-secondary">Batch Gross Volume</span>
+<div class="font-code-md text-code-md font-bold text-on-surface">1,048.6 kg</div>
+</div>
+<span class="px-2 py-0.5 rounded font-label-sm text-label-sm font-semibold bg-surface-container text-on-surface-variant">4 SEALED CANISTERS</span>
+</div>
+</div>
+<button class="w-full mt-space-xs inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary-container text-on-primary py-2.5 px-space-md rounded-lg font-label-md text-label-md font-semibold shadow-sm transition-all">
+<span class="material-symbols-outlined text-[18px]">post_add</span>
+<span>Generate Form-10 Movement Document</span>
+</button>
+<div class="flex items-center justify-between mt-space-sm pt-space-xs border-t border-outline-variant/20 font-label-sm text-label-sm">
+<a class="text-primary hover:underline font-semibold flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-[16px]">receipt</span>
+<span>View TSDF Gate Pass</span>
+</a>
+<a class="text-secondary hover:text-on-surface flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-[16px]">qr_code_2</span>
+<span>Print Canister QR</span>
+</a>
+</div>
+</div>
+<!-- Card 3: Vault Thermal & Negative Pressure Integrity -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md border border-outline-variant/30 shadow-sm">
+<div class="flex items-center justify-between mb-space-sm">
+<h3 class="font-label-md text-label-md uppercase tracking-wider text-secondary font-semibold">Bunker Atmospheric Integrity</h3>
+<span class="font-code-sm text-code-sm text-primary font-semibold">FAILSAFE ARMED</span>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="p-2.5 rounded bg-surface-container-low border border-outline-variant/20">
+<div class="font-label-sm text-label-sm text-secondary">Negative Pressure</div>
+<div class="font-code-md text-code-md font-bold text-primary mt-0.5">-45 Pa</div>
+<div class="text-[11px] text-secondary mt-0.5">Hermetic Lock Intact</div>
+</div>
+<div class="p-2.5 rounded bg-surface-container-low border border-outline-variant/20">
+<div class="font-label-sm text-label-sm text-secondary">Emergency Scrubbers</div>
+<div class="font-code-md text-code-md font-bold text-on-surface mt-0.5">99.8% Eff.</div>
+<div class="text-[11px] text-primary font-medium mt-0.5">Standby Ready</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Bottom Section: Statutory Hazardous Chain-of-Custody & Lifecycle Pipeline -->
+<section class="w-full bg-surface-container-lowest rounded-xl p-space-md border border-outline-variant/30 shadow-sm mb-space-lg">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between pb-space-sm border-b border-outline-variant/20 gap-space-xs">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Statutory Hazardous Chain-of-Custody &amp; TSDF Gate Pass Lifecycle</h3>
+<p class="font-body-sm text-body-sm text-secondary">End-to-end material quarantine verification pursuant to MoEFCC E-Waste Management Rules 2022</p>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="font-code-sm text-code-sm text-secondary">SHA-256 STATE ROOT:</span>
+<span class="font-code-sm text-code-sm font-mono text-primary bg-surface-container px-2 py-0.5 rounded border border-outline-variant/30">0x9c4f...d88e</span>
+</div>
+</div>
+<!-- 5-Stage Horizontal Pipeline -->
+<div class="py-space-lg grid grid-cols-1 md:grid-cols-5 gap-space-md relative">
+<!-- Step 1 -->
+<div class="flex flex-col p-space-sm rounded-lg bg-surface-container-low border border-outline-variant/30 relative">
+<div class="flex items-center justify-between mb-1">
+<span class="w-6 h-6 rounded-full bg-primary text-on-primary font-code-sm text-code-sm flex items-center justify-center font-bold">1</span>
+<span class="material-symbols-outlined text-primary text-[18px]">verified</span>
+</div>
+<div class="font-label-md text-label-md font-semibold text-on-surface">E-Waste Yard Extraction</div>
+<div class="font-body-sm text-body-sm text-secondary mt-0.5">Mechanical depopulation &amp; segregation</div>
+<div class="font-code-sm text-code-sm text-primary font-semibold mt-2">COMPLETED</div>
+</div>
+<!-- Step 2 -->
+<div class="flex flex-col p-space-sm rounded-lg bg-surface-container-low border border-outline-variant/30 relative">
+<div class="flex items-center justify-between mb-1">
+<span class="w-6 h-6 rounded-full bg-primary text-on-primary font-code-sm text-code-sm flex items-center justify-center font-bold">2</span>
+<span class="material-symbols-outlined text-primary text-[18px]">verified</span>
+</div>
+<div class="font-label-md text-label-md font-semibold text-on-surface">Chemical Assay &amp; Weighing</div>
+<div class="font-body-sm text-body-sm text-secondary mt-0.5">Spectrometry verification &amp; tare match</div>
+<div class="font-code-sm text-code-sm text-primary font-semibold mt-2">COMPLETED</div>
+</div>
+<!-- Step 3 -->
+<div class="flex flex-col p-space-sm rounded-lg bg-surface-container-low border border-outline-variant/30 relative">
+<div class="flex items-center justify-between mb-1">
+<span class="w-6 h-6 rounded-full bg-primary text-on-primary font-code-sm text-code-sm flex items-center justify-center font-bold">3</span>
+<span class="material-symbols-outlined text-primary text-[18px]">lock</span>
+</div>
+<div class="font-label-md text-label-md font-semibold text-on-surface">Vault Encapsulation</div>
+<div class="font-body-sm text-body-sm text-secondary mt-0.5">Vitrified, lead-shielded &amp; sealed</div>
+<div class="font-code-sm text-code-sm text-primary font-semibold mt-2">ACTIVE IN VAULT</div>
+</div>
+<!-- Step 4 -->
+<div class="flex flex-col p-space-sm rounded-lg bg-surface-container border border-primary/40 relative">
+<div class="flex items-center justify-between mb-1">
+<span class="w-6 h-6 rounded-full bg-primary-container text-on-primary font-code-sm text-code-sm flex items-center justify-center font-bold">4</span>
+<span class="inline-block w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+</div>
+<div class="font-label-md text-label-md font-semibold text-on-surface">Form-10 Manifest Signed</div>
+<div class="font-body-sm text-body-sm text-secondary mt-0.5">CPCB Portal nodal webhook sync</div>
+<div class="font-code-sm text-code-sm text-primary font-semibold mt-2">READY FOR SIGN-OFF</div>
+</div>
+<!-- Step 5 -->
+<div class="flex flex-col p-space-sm rounded-lg bg-surface-container-low border border-outline-variant/20 opacity-75 relative">
+<div class="flex items-center justify-between mb-1">
+<span class="w-6 h-6 rounded-full bg-surface text-secondary font-code-sm text-code-sm flex items-center justify-center font-bold">5</span>
+<span class="material-symbols-outlined text-secondary text-[18px]">schedule</span>
+</div>
+<div class="font-label-md text-label-md font-semibold text-on-surface">TSDF Secure Disposal</div>
+<div class="font-body-sm text-body-sm text-secondary mt-0.5">High-temp incineration / secured landfill</div>
+<div class="font-code-sm text-code-sm text-secondary font-semibold mt-2">SCHEDULED (06:30 AM)</div>
+</div>
+</div>
+<!-- Integrity Hash Footer -->
+<div class="pt-space-sm border-t border-outline-variant/20 flex flex-col sm:flex-row items-start sm:items-center justify-between font-code-sm text-code-sm text-secondary gap-space-xs">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[16px]">lock_clock</span>
+<span>CPCB Nodal Webhook Timestamp: 2026-09-10T11:42:09+05:30</span>
+</div>
+<div class="flex items-center gap-2">
+<span>Tamper Proof Root:</span>
+<span class="text-on-surface font-mono font-semibold">b8a10fd3...619cc41</span>
+<span class="material-symbols-outlined text-primary text-[16px]">check_circle</span>
+</div>
+</div>
+</section>
+</div></main></div></body></html>

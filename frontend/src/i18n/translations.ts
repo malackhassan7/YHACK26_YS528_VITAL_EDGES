@@ -1,0 +1,160 @@
+export type SupportedLanguage = "en" | "hi";
+
+export const translations = {
+  en: {
+    // Navigation & Common
+    appName: "Vital Edges",
+    tagline: "Formal E-Waste Collection & Circular Traceability",
+    collectorHome: "Collector home",
+    myLots: "My Lots",
+    priceCatalog: "Price Catalog",
+    earnings: "My Earnings",
+    safetyCenter: "Safety Center",
+    recyclerHome: "Recycler home",
+    adminHome: "Admin home",
+    logout: "Logout",
+    demoMode: "Demo Mode",
+    online: "Online",
+    offline: "Offline Mode — Changes saved to device",
+    offlineNotice: "You are currently offline. Local drafts are safe, but financial and handover actions require an internet connection.",
+
+    // Dashboard
+    collectorDashboardTitle: "Collector dashboard",
+    collectorDashboardSubtitle: "Create digital e-waste lots, view fair market prices, connect with authorized recyclers, and receive verified payouts.",
+    createLotCta: "Create E-Waste Lot",
+    viewLotsCta: "My Lots",
+    checkPricesCta: "Check Prices",
+    viewEarningsCta: "View Earnings",
+    safetyGuideCta: "Safety Center",
+    currentRole: "Current role",
+
+    // Safety Center
+    safetyTitle: "E-Waste Safe Handling & Precautions Guide",
+    safetySubtitle: "Pictorial & audio guidelines for informal collectors. Protect your health and the environment through safe handling and zero burning.",
+    listenAudio: "Read Aloud",
+    stopAudio: "Stop Audio",
+    hazardLevel: "Hazard Level",
+    safeHandling: "Safe Handling Guidelines",
+    doNotDo: "What NOT to do (Danger)",
+    hazardHigh: "HIGH HAZARD",
+    hazardMedium: "MEDIUM HAZARD",
+    hazardLow: "LOW HAZARD",
+
+    // Prices
+    priceTitle: "Reference E-Waste Price Catalog",
+    priceSubtitle: "Transparent baseline prices benchmarked for formal circular recycling. Final payment is based on actual certified scale weight.",
+    materialName: "Material Category",
+    referencePrice: "Reference Fair Price",
+    conditionAdjustments: "Condition Factors",
+    searchPlaceholder: "Search materials (e.g. PCB, Mobile, Laptop)...",
+
+    // Earnings
+    earningsTitle: "Collector Earnings & Payout History",
+    earningsSubtitle: "Verified financial ledger of commercial e-waste transactions settled via authorized recyclers.",
+    totalEarnings: "Total Verified Earnings",
+    completedPayouts: "Completed Payouts",
+    pendingPayouts: "Pending Verification/Payout",
+    noTransactionsYet: "No transactions recorded yet. Create and list a lot to begin receiving commercial offers.",
+    transactionId: "Transaction ID",
+    agreedPrice: "Agreed Price",
+    verifiedWeight: "Verified Weight",
+    payoutAmount: "Final Payout",
+    status: "Status",
+    date: "Settlement Date",
+    viewDetails: "View Details",
+
+    // Offers & Lifecycle
+    incomingOffers: "Commercial Offers Received",
+    noOffersYet: "No offers received yet. Compatible authorized recyclers have been notified.",
+    acceptOffer: "Accept Offer",
+    rejectOffer: "Decline",
+    accepted: "Accepted",
+    handoverScheduled: "Handover Scheduled",
+    qrCodeTitle: "Handover QR Credential",
+    manualFallback: "Manual Fallback Code",
+    scaleVerification: "Verified Scale Weight",
+    paymentConfirmed: "Payment Confirmed (Demo)",
+    processingStarted: "Processing Started",
+    recyclingEvidence: "Recycling Evidence Added",
+    closed: "Digital Passport Closed",
+    printCertificate: "Print Recycling Certificate"
+  },
+  hi: {
+    // Navigation & Common
+    appName: "वाइटल एजेस",
+    tagline: "औपचारिक ई-कचरा संग्रहण एवं पुनर्चक्रण मंच",
+    collectorHome: "कलेक्टर होम",
+    myLots: "मेरे लॉट",
+    priceCatalog: "मूल्य सूची",
+    earnings: "मेरी कमाई",
+    safetyCenter: "सुरक्षा गाइड",
+    recyclerHome: "रीसाइक्लर होम",
+    adminHome: "प्रशासक होम",
+    logout: "लॉगआउट",
+    demoMode: "डेमो मोड",
+    online: "ऑनलाइन",
+    offline: "ऑफ़लाइन मोड — परिवर्तन डिवाइस पर सहेजे गए",
+    offlineNotice: "आप वर्तमान में ऑफ़लाइन हैं। स्थानीय ड्राफ्ट सुरक्षित हैं, लेकिन वित्तीय एवं हैंडओवर कार्यों के लिए इंटरनेट आवश्यक है।",
+
+    // Dashboard
+    collectorDashboardTitle: "कलेक्टर डैशबोर्ड",
+    collectorDashboardSubtitle: "डिजिटल ई-कचरा लॉट बनाएं, उचित मूल्य देखें, अधिकृत रीसाइक्लर्स से जुड़ें और सत्यापित भुगतान प्राप्त करें।",
+    createLotCta: "ई-कचरा लॉट बनाएं",
+    viewLotsCta: "मेरे लॉट",
+    checkPricesCta: "मूल्य जांचें",
+    viewEarningsCta: "कमाई देखें",
+    safetyGuideCta: "सुरक्षा केंद्र",
+    currentRole: "वर्तमान भूमिका",
+
+    // Safety Center
+    safetyTitle: "ई-कचरा सुरक्षित प्रबंधन एवं सावधानियां गाइड",
+    safetySubtitle: "कलेक्टरों के लिए सचित्र एवं ऑडियो दिशा-निर्देश। सुरक्षित निपटान द्वारा अपने स्वास्थ्य और पर्यावरण की रक्षा करें।",
+    listenAudio: "ऑडियो सुनें",
+    stopAudio: "ऑडियो रोकें",
+    hazardLevel: "जोखिम स्तर",
+    safeHandling: "सुरक्षित रख-रखाव के नियम",
+    doNotDo: "क्या न करें (खतरा)",
+    hazardHigh: "उच्च जोखिम",
+    hazardMedium: "मध्यम जोखिम",
+    hazardLow: "निम्न जोखिम",
+
+    // Prices
+    priceTitle: "संदर्भ ई-कचरा मूल्य सूची",
+    priceSubtitle: "औपचारिक रीसाइक्लिंग के लिए पारदर्शी बेंचमार्क दरें। अंतिम भुगतान डिजिटल कांटे के वास्तविक वजन पर आधारित होता है।",
+    materialName: "सामग्री श्रेणी",
+    referencePrice: "संदर्भ उचित दर",
+    conditionAdjustments: "स्थिति कारक",
+    searchPlaceholder: "सामग्री खोजें (उदा. सर्किट बोर्ड, मोबाइल, लैपटॉप)...",
+
+    // Earnings
+    earningsTitle: "कलेक्टर कमाई एवं भुगतान इतिहास",
+    earningsSubtitle: "अधिकृत रीसाइक्लर्स द्वारा निपटाए गए वाणिज्यिक ई-कचरा लेन-देन का सत्यापित खाता।",
+    totalEarnings: "कुल सत्यापित कमाई",
+    completedPayouts: "सफल भुगतान",
+    pendingPayouts: "प्रक्रियाधीन भुगतान",
+    noTransactionsYet: "अभी तक कोई लेन-देन दर्ज नहीं है। वाणिज्यिक ऑफ़र प्राप्त करने के लिए लॉट बनाएं और सूचीबद्ध करें।",
+    transactionId: "लेन-देन आईडी",
+    agreedPrice: "सहमत दर",
+    verifiedWeight: "सत्यापित वजन",
+    payoutAmount: "अंतिम भुगतान",
+    status: "स्थिति",
+    date: "निपटान तिथि",
+    viewDetails: "विवरण देखें",
+
+    // Offers & Lifecycle
+    incomingOffers: "प्राप्त वाणिज्यिक ऑफ़र",
+    noOffersYet: "अभी तक कोई ऑफ़र नहीं मिला है। उपयुक्त अधिकृत रीसाइक्लर्स को सूचित कर दिया गया है।",
+    acceptOffer: "ऑफ़र स्वीकार करें",
+    rejectOffer: "अस्वीकार करें",
+    accepted: "स्वीकृत",
+    handoverScheduled: "हैंडओवर निर्धारित",
+    qrCodeTitle: "हैंडओवर क्यूआर क्रेडेंशियल",
+    manualFallback: "मैनुअल बैकअप कोड",
+    scaleVerification: "सत्यापित कांटा वजन",
+    paymentConfirmed: "भुगतान की पुष्टि (डेमो)",
+    processingStarted: "प्रसंस्करण प्रारंभ",
+    recyclingEvidence: "रीसाइक्लिंग साक्ष्य जोड़ा गया",
+    closed: "डिजिटल पासपोर्ट पूर्ण एवं बंद",
+    printCertificate: "रीसाइक्लिंग प्रमाणपत्र प्रिंट करें"
+  }
+} as const;

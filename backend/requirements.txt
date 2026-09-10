@@ -5,3 +5,5 @@ pydantic-settings
 sqlalchemy
 pytest
 httpx
+pillow
+imagehash

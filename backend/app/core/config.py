@@ -11,6 +11,13 @@ class Settings(BaseSettings):
     supabase_url: str = ""
     supabase_anon_key: str = ""
     supabase_jwt_audience: str = "authenticated"
+    # Sprint A: Verification Engine
+    ai_classification_enabled: bool = False
+    ai_api_key: str = ""
+    # Perceptual hash Hamming distance threshold (≤ this = duplicate, per docs/verification-engine.md)
+    perceptual_hash_threshold: int = 10
+    # Trust score required for automatic VERIFIED transition (medium confidence)
+    min_trust_score_for_verified: int = 50
 
     model_config = SettingsConfigDict(
         env_prefix="VITAL_EDGES_",
